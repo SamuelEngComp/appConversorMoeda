@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">AppConversorMoeda</string>
     <string name="btnConversor">Converter</string>
-    <string name="campoMoeda">Dolar</string>
-    <string name="semValor">Sem valor</string>
+    <string name="campoMoeda">Digite o valor em reais R$</string>
+    <string name="semValor">R$ Valor digitado</string>
+    <string name="valorDoEuro">E Euro</string>
+    <string name="valorDoDolar">$ Dolar</string>
 </resources>

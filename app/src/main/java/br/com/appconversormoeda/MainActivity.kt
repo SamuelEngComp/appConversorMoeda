@@ -2,7 +2,6 @@ package br.com.appconversormoeda
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.InputType
 import br.com.appconversormoeda.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -22,14 +21,22 @@ class MainActivity : AppCompatActivity() {
         val valorDigitado = binding.editText.text
 
             binding.botaoConverter.setOnClickListener {
-                if (valorDigitado.toString().isNotEmpty())
-                    imprimeValor(valorDigitado.toString().toInt())
+                if (valorDigitado.toString().isNotEmpty()){
+                    val valorQueUsuarioDigitou = valorDigitado.toString().toFloat()
+                    val valorEuro = 0.19 * valorQueUsuarioDigitou
+                    val valorDolar = 0.21 * valorQueUsuarioDigitou
+                        imprimeValor(valorQueUsuarioDigitou, valorEuro.toFloat(), valorDolar.toFloat())
+                }
+
             }
     }
 
-    private fun imprimeValor(valor: Int = 0){
+    private fun imprimeValor(valorDigitado: Float, valorEmEuro: Float, valorEmDolar: Float){
        // binding.editText.text.clear()
 
-        binding.textoHello.text = valor.toString()
+        binding.valorDigitado.text = "R$ " + valorDigitado.toString() + " Reais"
+        binding.valorEmEuro.text = "E " + valorEmEuro.toString() + " Euros"
+        binding.valorEmDolar.text = "$ " + valorEmDolar.toString() + " Dolares"
+
     }
 }

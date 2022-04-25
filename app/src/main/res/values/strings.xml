@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AppConversorMoeda</string>
+    <string name="btnConversor">Converter</string>
+    <string name="campoMoeda">Dolar</string>
+    <string name="semValor">Sem valor</string>
+</resources>
